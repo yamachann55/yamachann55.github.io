@@ -1,0 +1,144 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #0f1115;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* Layout Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    padding: 80px 0 40px;
+    text-align: center;
+    border-bottom: 1px solid #22272e;
+}
+
+.brand-name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: #8b949e;
+}
+
+/* Sections General */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #161b22;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: #ffffff;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    max-width: 700px;
+}
+
+/* Portfolio Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background-color: #161b22;
+    border: 1px solid #22272e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    font-size: 1.2rem;
+    color: #f1f5f9;
+    margin-bottom: 8px;
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    color: #8b949e;
+}
+
+/* Contact Button */
+.contact-section p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.contact-button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Footer */
+footer {
+    padding: 40px 0;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .brand-name {
+        font-size: 2rem;
+    }
+    header {
+        padding: 50px 0 30px;
+    }
+}
