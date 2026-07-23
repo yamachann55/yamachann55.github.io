@@ -3,82 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Name - Unity Asset Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
+    <title>YAMACHANN STUDIO - Unity Asset Developer</title>
+    
+    <!-- Google Fonts: Inter & Noto Sans JP -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <div class="container">
+    <!-- Ambient Floating Glass Light Orbs -->
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="dot"></span>
+                <span>UNITY ASSET STUDIO</span>
+            </div>
+            <div class="nav-right">
+                <a href="https://x.com/Yamachann5555" target="_blank" rel="noopener noreferrer" class="nav-x-icon" title="Follow on X">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <div class="lang-switch">
+                    <button id="lang-en" class="lang-btn active">EN</button>
+                    <span class="lang-divider">/</span>
+                    <button id="lang-ja" class="lang-btn">JA</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="hero-header">
+        <div class="hero-banner-bg" style="background-image: url('assets/header-banner.png');"></div>
+        <div class="hero-backdrop"></div>
+        
+        <div class="hero-glass-card">
+            <div class="glass-edge-shine"></div>
+            <div class="hero-badge" data-i18n="badgeText">UNITY PUBLISHER - IN DEVELOPMENT</div>
             <h1 class="brand-name">YAMACHANN STUDIO</h1>
-            <p class="tagline">High-Quality Assets & Tools for Unity Developers</p>
+            <p class="tagline" data-i18n="tagline">High-Quality Japanese 3D Assets for Unity — Upcoming Releases & Preview</p>
         </div>
     </header>
 
+    <!-- Main Content Container -->
     <main class="container">
+        
         <!-- About Section -->
-        <section class="about-section">
-            <h2>About Us</h2>
-            <p style="font-weight: 600; color: #f1f5f9; font-size: 1.25rem; margin-bottom: 12px;">
-                Empowering Developers with Authentic Japanese Assets
+        <section class="about-section glass-panel">
+            <div class="glass-edge-shine"></div>
+            <div class="section-header">
+                <h2 data-i18n="aboutTitle">About Us</h2>
+                <div class="title-line"></div>
+            </div>
+            <p class="about-subtitle" data-i18n="aboutSubtitle">
+                Crafting Authentic Japanese 3D Assets — Coming Soon to Unity Asset Store!
             </p>
-            <p>
-                We specialize in crafting and delivering a diverse array of high-quality, ultra-realistic Japanese 3D assets—ranging from everyday props and intricate architectural structures to immersive environment details. Every asset is meticulously sculpted and optimized specifically for Unity, ensuring seamless integration and superior performance in your projects. Our mission is to empower game developers and creators worldwide to effortlessly infuse authentic Japanese atmosphere and aesthetic precision into their virtual worlds.
+            <p class="about-text" data-i18n="aboutDescription">
+                Welcome! We are currently developing a wide range of ultra-realistic, high-fidelity Japanese 3D asset packs for Unity—from street props and modern architecture to detailed urban environment kits.
             </p>
         </section>
-        
-        <!-- Showcase / Portfolio Section -->
+
+        <!-- Portfolio / Works in Progress Section -->
         <section class="portfolio-section">
-            <h2>Portfolio & Works in Progress</h2>
-            <p class="section-desc">Here is a preview of 3D models and environments built for Unity. Package releases are coming soon!</p>
+            <div class="section-header">
+                <h2 data-i18n="portfolioTitle">Portfolio & Works in Progress</h2>
+                <div class="title-line"></div>
+            </div>
+            <p class="section-desc" data-i18n="portfolioDesc">
+                Here is an early sneak peek of 3D models currently in active development. Packages are launching very soon on the Unity Asset Store!
+            </p>
             
-            <div class="grid">
-                <!-- Card 1 -->
-                <div class="card">
-                    <img src="https://via.placeholder.com/600x400/22252a/808080?text=Work+Sample+1" alt="Japanese Prop Sample">
-                    <div class="card-body">
-                        <h3>Japanese Street Props</h3>
-                        <p>Detailed 3D models of everyday Japanese street elements, optimized for real-time rendering.</p>
-                    </div>
+            <div id="portfolio-grid" class="grid"></div>
+        </section>
+
+        <!-- Dynamic Photo Gallery Section -->
+        <section class="gallery-section glass-panel">
+            <div class="glass-edge-shine"></div>
+            <div class="section-header">
+                <h2 data-i18n="galleryTitle">Asset Snapshot Gallery</h2>
+                <div class="title-line"></div>
+            </div>
+            <p class="section-desc" data-i18n="galleryDesc">
+                A visual collection of high-resolution renders, materials, and development snapshots.
+            </p>
+            
+            <div id="gallery-grid" class="gallery-grid"></div>
+        </section>
+
+        <!-- Separate Contact Section (Email Only) -->
+        <section class="contact-section glass-panel">
+            <div class="glass-edge-shine"></div>
+            <div class="section-header">
+                <h2 data-i18n="contactTitle">Contact & Support</h2>
+                <div class="title-line"></div>
+            </div>
+            <p class="contact-desc" data-i18n="contactDesc">
+                For inquiries, feedback, or custom requests, feel free to contact via email:
+            </p>
+            
+            <div class="contact-card glass-subcard">
+                <div class="email-display">
+                    <svg class="email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span id="email-address-text" class="email-address">yamachan.contact@gmail.com</span>
                 </div>
-                <!-- Card 2 -->
-                <div class="card">
-                    <img src="https://via.placeholder.com/600x400/22252a/808080?text=Work+Sample+2" alt="Architectural Sample">
-                    <div class="card-body">
-                        <h3>Traditional & Modern Architecture</h3>
-                        <p>Modular building structures capturing authentic Japanese architectural nuances.</p>
-                    </div>
+                <div class="contact-actions">
+                    <a id="email-mailto-link" href="mailto:yamachan.contact@gmail.com" class="btn btn-primary" data-i18n="sendEmail">
+                        Send Email
+                    </a>
+                    <button id="copy-email-btn" class="btn btn-secondary" data-i18n="copyEmail">
+                        Copy Email
+                    </button>
                 </div>
-                <!-- Card 3 -->
-                <div class="card">
-                    <img src="https://via.placeholder.com/600x400/22252a/808080?text=Work+Sample+3" alt="Environment Sample">
-                    <div class="card-body">
-                        <h3>Environment Details</h3>
-                        <p>High-quality props and assets designed to fill and bring realistic Japanese scenes to life.</p>
-                    </div>
+                <div id="copy-feedback" class="copy-toast">Copied!</div>
+            </div>
+        </section>
+
+        <!-- Separate Official X (Twitter) Section -->
+        <section class="social-section glass-panel">
+            <div class="glass-edge-shine"></div>
+            <div class="section-header">
+                <h2 data-i18n="socialTitle">Official X (Twitter)</h2>
+                <div class="title-line"></div>
+            </div>
+            <p class="contact-desc" data-i18n="socialDesc">
+                Connect with us on X for direct messages and updates:
+            </p>
+            
+            <div class="social-card glass-subcard">
+                <div class="social-display">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="x-social-icon">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    <span class="x-handle-text">@Yamachann5555</span>
+                </div>
+                <div class="contact-actions">
+                    <a href="https://x.com/Yamachann5555" target="_blank" rel="noopener noreferrer" class="btn btn-x-social">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-right: 6px;">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        <span data-i18n="followOnX">Follow on X</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <h2>Contact & Support</h2>
-            <p>For inquiries, support, or custom asset requests, feel free to reach out:</p>
-            <a href="mailto:your-email@example.com" class="contact-button">Contact via Email</a>
-        </section>
     </main>
+
+    <!-- Photo Lightbox Modal -->
+    <div id="image-modal" class="image-modal">
+        <span class="modal-close">&times;</span>
+        <img id="modal-img" class="modal-content-img" src="" alt="Enlarged View">
+        <div id="modal-caption" class="modal-caption-text"></div>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 YOUR STUDIO NAME. All rights reserved.</p>
+        <div class="container footer-content">
+            <p>&copy; 2026 YAMACHANN STUDIO. <span data-i18n="footerRights">All rights reserved.</span></p>
         </div>
     </footer>
 
+    <!-- Load Config Data and Controller Script -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
