@@ -246,7 +246,7 @@ body {
 .hero-glass-card {
   position: relative;
   z-index: 2;
-  max-width: 900px;
+  max-width: 820px;
   width: 90%;
   margin: 0 auto;
   text-align: center;
@@ -288,7 +288,7 @@ body {
   font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--text-secondary);
-  max-width: 660px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
